@@ -1,0 +1,32 @@
+startup_message off
+defutf8 on
+#caption always "%{yk} %n %{BK} %t"
+hardstatus alwayslastline
+#hardstatus alwayslastline "%{+b kr} [ %H ] %{ky} Load: %l %-=%{kb} %C %a  %M %d "
+hardstatus string "%{=}%{+b kr} [ %H ]  %{-b b}%L=%-w%45L>%{+b .W}%n %t%{-}%+w%=%-40= %{+b ky} Load: %l%{kb} %C %a  %M %d "
+altscreen on
+defscrollback 50000
+
+# Ctrl+Space is the escape key here.
+# Ctrl+Space Space sends an actual ^@
+#escape \000\040
+# Ctrl+Space Ctrl+Space toggles with the MRU window.
+#bind \000 other
+# Assing both ' and " to window list as it's more useful.
+#bind "'" windowlist -b
+#bind '"' windowlist -b
+
+# Don't seize up all of screen when a connection is dropped.
+# defnonblock 10
+# defobuflimit 1024
+
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+attrcolor b ".I"
+# tell screen how to set colors. AB = background, AF=foreground
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+# erase background with current bg color
+# defbce "on"
+
+# Preserve scrollback in xterm itself too.
+termcapinfo xterm 'ti=\E7\E[?47l'
