@@ -3,7 +3,7 @@ defutf8 on
 #caption always "%{yk} %n %{BK} %t"
 hardstatus alwayslastline
 #hardstatus alwayslastline "%{+b kr} [ %H ] %{ky} Load: %l %-=%{kb} %C %a  %M %d "
-hardstatus string "%{=}%{+b kr} [ %H ]  %{-b b}%L=%-w%45L>%{+b .W}%n %t%{-}%+w%=%-40= %{+b ky} Load: %l%{kb} %C %a  %M %d "
+hardstatus string "%{=}%{+b kr} [ %H:%S ]  %{-b b}%L=%-w%45L>%{+b .W}%n %t%{-}%+w%=%-40= %{+b ky} Load: %l%{kb} %C %a  %M %d "
 altscreen on
 defscrollback 50000
 
